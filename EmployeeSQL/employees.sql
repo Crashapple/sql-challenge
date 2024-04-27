@@ -32,7 +32,9 @@ CREATE TABLE "employees" (
 CREATE TABLE "dept_emp" (
     "emp_no" INT   NOT NULL,
     "dept_no" VARCHAR   NOT NULL,
-    PRIMARY KEY (emp_no, dept_no)
+    CONSTRAINT "pk_dept_emp" PRIMARY KEY (
+        "emp_no","dept_no"
+        )
 );
 
 CREATE TABLE "dept_manager" (
